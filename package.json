@@ -1,0 +1,32 @@
+{
+  "name": "mern-first-application",
+  "version": "1.0.0",
+  "description": "My first MERN application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoliE1ON/mern-first-application.git"
+  },
+  "keywords": [
+    "mern"
+  ],
+  "author": "E1ON",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoliE1ON/mern-first-application/issues"
+  },
+  "homepage": "https://github.com/LoliE1ON/mern-first-application#readme",
+  "dependencies": {
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "mongoose": "^4.13.20"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "nodemon": "^2.0.2"
+  }
+}
