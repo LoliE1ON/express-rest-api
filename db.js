@@ -7,9 +7,6 @@ module.exports = async (callback) => {
     try {
 
         mongoose.connect(config.get('db.mongoUri'), {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true,
             useMongoClient: true
         });
 
