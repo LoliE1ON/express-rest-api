@@ -1,2 +1,2 @@
-# mern-first-application
+# Mongo, Express, React, Node
 My first MERN application
