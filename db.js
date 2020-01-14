@@ -1,10 +1,13 @@
 const mongoose = require('mongoose')
-const config = require('config')
+require('dotenv').config()
 
 module.exports = async (callback) => {
 
-    // Connetion to mongo
-    mongoose.connect(config.get('db.mongoUri'), {
+    // Connection string
+    const mongoConnectionString = process.env.MONGO_CONNECTION
+
+    // Connection to mongodb
+    mongoose.connect(mongoConnectionString, {
         useNewUrlParser: true
     });
 

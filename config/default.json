@@ -1,8 +1,5 @@
 {
   "server": {
     "port": 5000
-  },
-  "db": {
-    "mongoUri": "mongodb+srv://e1on:qwerty123@cluster0-6itnd.azure.mongodb.net/app?retryWrites=true&w=majority"
   }
 }

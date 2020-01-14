@@ -5,3 +5,8 @@ package-lock.json
 
 # Editor directories and files
 .idea
+
+# local env files
+.env.local
+.env.*.local
+.env
