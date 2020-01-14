@@ -3,6 +3,6 @@
     "port": 5000
   },
   "db": {
-    "mongoUri": "mongodb://e1on:qwerty123@cluster0-shard-00-00-6itnd.azure.mongodb.net:27017,cluster0-shard-00-01-6itnd.azure.mongodb.net:27017,cluster0-shard-00-02-6itnd.azure.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority"
+    "mongoUri": "mongodb+srv://e1on:qwerty123@cluster0-6itnd.azure.mongodb.net/app?retryWrites=true&w=majority"
   }
 }

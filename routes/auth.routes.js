@@ -1,15 +1,18 @@
 const { Router } = require('express')
 const router = Router()
 
-router.get('', async (req, res) => {
+// Login
+router.post('/login', async (req, res) => {
+    res.status(500).json({
+        message: "Work in progress..."
+    })
+})
 
-    try {
-        res.json({ message: "Test route!"})
-    }
-    catch (e) {
-        res.status(500).json({ message: "Error..."})
-    }
-
+// Register
+router.post('/register', async (req, res) => {
+    res.status(500).json({
+        message: "Work in progress..."
+    })
 })
 
 module.exports = router

@@ -1,8 +1,13 @@
 module.exports = (app) => {
 
+    // Routes
+
     app.get('/', function(req, res){
-        res.json({ message: "Hello world!"})
+        res.json({
+            message: "Index end point"
+        })
     });
 
-    app.use('/api/test', require('./routes/test.routes'))
+    app.use('/api/auth', require('./routes/auth.routes'))
+
 }

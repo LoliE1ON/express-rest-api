@@ -3,24 +3,15 @@ const config = require('config')
 
 module.exports = async (callback) => {
 
-    console.log("Connected to database...")
-    try {
+    // Connetion to mongo
+    mongoose.connect(config.get('db.mongoUri'), {
+        useNewUrlParser: true
+    });
 
-        mongoose.connect(config.get('db.mongoUri'), {
-            useMongoClient: true
-        });
+    const db = mongoose.connection;
+    db.on('error', console.error.bind(console, 'connection error:'));
 
-        const db = mongoose.connection;
-        db.on('error', console.error.bind(console, 'connection error:'));
-        db.once('open', function() {
-            callback()
-            console.log("Connected to database successfully")
-        });
-
-    }
-    catch (e) {
-        console.log('Database error', e.message)
-        process.exit(1)
-    }
+    // Start server
+    db.once('open', () => callback());
 
 }
