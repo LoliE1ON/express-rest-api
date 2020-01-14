@@ -8,7 +8,8 @@ module.exports = async (callback) => {
 
     // Connection to mongodb
     mongoose.connect(mongoConnectionString, {
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useUnifiedTopology: true
     });
 
     const db = mongoose.connection;
