@@ -1,7 +1,7 @@
 {
-  "name": "mern-first-application",
+  "name": "express-rest-api",
   "version": "1.0.0",
-  "description": "My first MERN application",
+  "description": "express-rest-api",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LoliE1ON/mern-first-application.git"
+    "url": "git+https://github.com/LoliE1ON/express-rest-api.git"
   },
   "keywords": [
     "mern"
@@ -17,9 +17,9 @@
   "author": "E1ON",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LoliE1ON/mern-first-application/issues"
+    "url": "https://github.com/LoliE1ON/express-rest-api/issues"
   },
-  "homepage": "https://github.com/LoliE1ON/mern-first-application#readme",
+  "homepage": "https://github.com/LoliE1ON/express-rest-api#readme",
   "dependencies": {
     "config": "^3.2.4",
     "express": "^4.17.1",
