@@ -2,13 +2,14 @@ const { Router } = require('express')
 const router = Router()
 const middleware = require('../middlewares/auth.middleware')
 const User = require('../models/User')
+const crypto = require('crypto')
 
 // Middleware
 router.use(middleware);
 
 // Login
 router.post('/login', async (req, res) => {
-    res.status(500).json({
+    return res.status(500).json({
         time: req.requestTime,
         message: "Work in progress..."
     })
@@ -17,9 +18,11 @@ router.post('/login', async (req, res) => {
 // Register new user
 router.post('/register', async (req, res) => {
 
-    console.log(req)
+    // Generate session
+    const session = crypto.createHmac('sha256', req.body.password)
+        .update(Math.round((new Date()).getTime() / 1000).toString())
+        .digest('hex');
 
-    const session = "123JPhj78d"
     const user = new User({
         login: req.body.login,
         password: req.body.password,
@@ -30,7 +33,7 @@ router.post('/register', async (req, res) => {
 
         // Save new user
         await user.save()
-        res.json({
+        return res.json({
             message: "You have successfully registered",
             user: {
                 login: req.body.login,
@@ -40,7 +43,7 @@ router.post('/register', async (req, res) => {
 
     }
     catch (e) {
-        res.status(500).json({
+        return res.status(500).json({
             message: "Server error"
         })
     }
