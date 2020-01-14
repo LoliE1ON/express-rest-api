@@ -16,6 +16,7 @@ router.post('/login', async (req, res) => {
 // Register
 router.post('/register', async (req, res) => {
     res.status(500).json({
+        time: req.requestTime,
         message: "Work in progress..."
     })
 })
