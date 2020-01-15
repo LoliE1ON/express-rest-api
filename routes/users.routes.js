@@ -1,17 +1,8 @@
 const { Router } = require('express')
 const router = Router()
-const User = require('../models/User')
+const usersListController = require('../controllers/users/list.controller')
 
 // Get all users
-router.get('/get', async (req, res) => {
-
-    try {
-        const users = await User.find();
-        return res.json({ users });
-    } catch (error) {
-        return res.status(500).send("Server error");
-    }
-
-})
+router.get('/list', async (req, res) => usersListController(req, res))
 
 module.exports = router
